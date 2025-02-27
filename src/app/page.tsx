@@ -1,4 +1,3 @@
-import { Header } from '@/components/Header'
 import { Hero } from '@/components/ui/Hero'
 import { ProductCard } from '@/components/ui/ProductCard'
 

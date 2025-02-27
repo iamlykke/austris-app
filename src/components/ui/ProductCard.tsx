@@ -1,9 +1,5 @@
 import Image from 'next/image'
 
-interface Props {
-    onClose: () => void
-}
-
 export const ProductCard: React.FC = () => {
     return (
         <div className="flex flex-col space-y-5 justify-center items-center h-auto max-w-[410px]">
