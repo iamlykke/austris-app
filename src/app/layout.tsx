@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import ClientWrapper from '@/components/ClientWrapper'
+import { Header } from '@/components/Header'
 import './globals.css'
 
 const inter = Inter({
@@ -21,7 +21,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.variable} antialiased`}>
-                <ClientWrapper>{children}</ClientWrapper>
+                <Header />
+                <main className="flex flex-col min-h-screen">{children}</main>
             </body>
         </html>
     )
