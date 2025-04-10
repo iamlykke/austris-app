@@ -30,7 +30,7 @@ export const Services: React.FC = () => {
         },
     ]
     return (
-        <div className="flex flex-col gap-[60px] container mx-auto mb-[60px] items-start sm:flex-row">
+        <div className="flex flex-col gap-[60px] container mx-auto mb-[60px] items-center justify-center sm:items-start sm:flex-row">
             {servicesList.map((service) => {
                 return (
                     <div className="flex flex-col text-center items-center w-[300px]" key={service.id}>
