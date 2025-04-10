@@ -28,9 +28,9 @@ export const Header: React.FC = () => {
     ]
 
     return (
-        <div className="bg-white flex flex-col space-y-4 justify-center items-center w-full pb-6 sticky top-0 z-10">
+        <div className="bg-white flex flex-col space-y-4 justify-center items-center w-full pb-[15px] sticky top-0 z-10">
             {isPromoVisible && <PromoBanner onClose={handleClosePromo} />}
-            <Image src="/logotype.png" width={290} height={88} alt="Austris candles logo" />
+            <Image className="mt-[17px]" src="/logotype.png" width={290} height={88} alt="Austris candles logo" />
             <nav className="flex flex-row space-x-3 items-center justify-between sm:space-x-8 ">
                 {navLinks.map((item, index) => (
                     <Link
