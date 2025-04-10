@@ -1,6 +1,6 @@
 export const Socials: React.FC = () => {
     return (
-        <section className=" flex flex-col justify-center items-center pb-[54px] mb-10 gap-[54px] border-b-2">
+        <section className=" flex flex-col justify-center items-center pb-[54px] gap-[54px] border-b-2">
             <div className="flex flex-col items-center gap-[25px] w-full">
                 <p className="text-[12px] uppercase text-center">Don&apos;t miss out!</p>
                 <p className="text-[18px] uppercase text-center">follow us on social media</p>
