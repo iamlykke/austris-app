@@ -14,7 +14,7 @@ const footerData: IFooterData = [
     [
         { id: 'first_1', title: 'Want to find out more about austris candles?', isTitle: true },
         { id: 'first_2', title: 'About us', href: '#', isTitle: false },
-        { id: 'first_3', title: 'Contact us', href: '#', isTitle: false },
+        { id: 'first_3', title: 'Contact us', href: '/contacts', isTitle: false },
         { id: 'first_4', title: 'Product Care', href: '#', isTitle: false },
     ],
     [

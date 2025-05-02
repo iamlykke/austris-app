@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { PromoBanner } from './ui/PromoBanner'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 interface INavLink {
     linkTo: string
@@ -12,6 +13,8 @@ interface INavLink {
 }
 
 export const Header: React.FC = () => {
+    const pathname = usePathname()
+
     const [isPromoVisible, setIsPromoVisible] = useState(true)
 
     const handleClosePromo = () => {
@@ -20,11 +23,11 @@ export const Header: React.FC = () => {
 
     const navLinks: INavLink[] = [
         { linkTo: '/candles', title: 'Candles' },
-        { linkTo: '/about', title: 'About us' },
+        // { linkTo: '/about', title: 'About us' },
         { linkTo: '/wholesale', title: 'Wholesale' },
         { linkTo: 'https://flowwow.com/en-en/shop/austris-handmade-candles/', title: 'Flowwow', target: '_blank' },
         { linkTo: '/contacts', title: 'Contact us' },
-        { linkTo: '/cart', title: 'Cart' },
+        // { linkTo: '/cart', title: 'Cart' },
     ]
 
     return (
@@ -35,16 +38,22 @@ export const Header: React.FC = () => {
             </Link>
 
             <nav className="flex flex-row space-x-3 items-center justify-between sm:space-x-8 ">
-                {navLinks.map((item, index) => (
-                    <Link
-                        key={index}
-                        href={item.linkTo}
-                        target={item.target}
-                        className="text-xs text-black uppercase transition duration-300 ease-in-out hover:text-black/70"
-                    >
-                        {item.title}
-                    </Link>
-                ))}
+                {navLinks.map((item, index) => {
+                    const isActive = pathname === item.linkTo
+
+                    return (
+                        <Link
+                            key={index}
+                            href={item.linkTo}
+                            target={item.target}
+                            className={`text-xs uppercase transition duration-300 ease-in-out hover:text-black/60 ${
+                                isActive ? 'font-bold' : 'text-black'
+                            }`}
+                        >
+                            {item.title}
+                        </Link>
+                    )
+                })}
             </nav>
         </div>
     )
