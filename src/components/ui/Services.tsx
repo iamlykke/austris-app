@@ -30,16 +30,24 @@ export const Services: React.FC = () => {
         },
     ]
     return (
-        <div className="flex flex-col gap-[60px] container mx-auto mb-[60px] items-center justify-center sm:items-start sm:flex-row">
-            {servicesList.map((service) => {
-                return (
-                    <div className="flex flex-col text-center items-center w-[300px]" key={service.id}>
-                        <Image width={32} height={32} src={service.imageLink} alt={service.title} className="mb-[26px]" />
-                        <p className="mb-[14px] text-[12px] font-[300] uppercase">{service.title}</p>
-                        <p className="text-[14px] font-[400]">{service.description}</p>
-                    </div>
-                )
-            })}
+        <div className="border-t-2 w-full">
+            <div className="flex flex-col gap-[60px] mx-auto container pt-[54px] pb-[60px] items-center justify-center sm:items-start sm:flex-row">
+                {servicesList.map((service) => {
+                    return (
+                        <div className="flex flex-col text-center items-center w-[300px]" key={service.id}>
+                            <Image
+                                width={32}
+                                height={32}
+                                src={service.imageLink}
+                                alt={service.title}
+                                className="mb-[26px]"
+                            />
+                            <p className="mb-[14px] text-[12px] font-[300] uppercase">{service.title}</p>
+                            <p className="text-[14px] font-[400]">{service.description}</p>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }

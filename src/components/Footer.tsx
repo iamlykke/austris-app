@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { SocialsLinks } from './ui/SocialsLinks'
 
 interface IFooterRow {
     id: string
@@ -46,7 +47,7 @@ const FooterColumn: React.FC<{ items: (typeof footerData)[0] }> = ({ items }) =>
                     {item.title}
                 </p>
             ) : (
-                <Link key={item.id} href={item.href!} className="font-[400] text-[14px] mb-[14px]">
+                <Link key={item.id} href={item.href!} className="font-[400] text-[14px] mb-[14px] hover:underline">
                     {item.title}
                 </Link>
             )
@@ -56,11 +57,15 @@ const FooterColumn: React.FC<{ items: (typeof footerData)[0] }> = ({ items }) =>
 
 export const Footer: React.FC = () => {
     return (
-        <div className="w-full flex flex-col container mx-auto px-4">
+        <div className="w-full flex flex-col container mx-auto px-4 mb-[30px]">
             <div className="grid grid-cols-2 w-full gap-5 justify-between items-start sm:flex">
                 {footerData.map((column, index) => (
                     <FooterColumn key={index} items={column} />
                 ))}
+            </div>
+            <div className="flex mt-[82px] flex-col gap-[30px] items-center">
+                <SocialsLinks />
+                <p className="font-[300] uppercase">© 2025 - AUSTRIS CANDLES</p>
             </div>
         </div>
     )

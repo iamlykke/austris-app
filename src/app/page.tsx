@@ -5,7 +5,7 @@ import { Socials } from '@/components/ui/Socials'
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-[54px]">
+        <div className="flex flex-col">
             <Hero />
             <ProductsSection />
             <Socials />

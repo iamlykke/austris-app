@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
     }
 
     const navLinks: INavLink[] = [
-        { linkTo: '/', title: 'Candles' },
+        { linkTo: '/candles', title: 'Candles' },
         { linkTo: '/about', title: 'About us' },
         { linkTo: '/wholesale', title: 'Wholesale' },
         { linkTo: 'https://flowwow.com/en-en/shop/austris-handmade-candles/', title: 'Flowwow', target: '_blank' },
@@ -30,7 +30,10 @@ export const Header: React.FC = () => {
     return (
         <div className="bg-white flex flex-col space-y-4 justify-center items-center w-full pb-[15px] sticky top-0 z-10">
             {isPromoVisible && <PromoBanner onClose={handleClosePromo} />}
-            <Image className="mt-[17px]" src="/logotype.png" width={290} height={88} alt="Austris candles logo" />
+            <Link href="/">
+                <Image className="mt-[17px]" src="/logotype.png" width={290} height={88} alt="Austris candles logo" />
+            </Link>
+
             <nav className="flex flex-row space-x-3 items-center justify-between sm:space-x-8 ">
                 {navLinks.map((item, index) => (
                     <Link
