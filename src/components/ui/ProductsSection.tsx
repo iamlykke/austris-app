@@ -13,7 +13,7 @@ export default async function ProductsSection() {
 
     return (
         <section className="flex flex-col gap-[40px] items-center pb-[54px] pt-[54px]">
-            <div className="flex flex-col items-center gap-[25px] w-full">
+            <div className="flex flex-col items-center gap-[25px] w-full px-3">
                 <p className="text-[12px] uppercase text-center">Comforting SCENTS for your home</p>
                 <p className="text-[28px] uppercase text-center">Introducing even BIGGER & BETTER Feel Good Fragrance</p>
             </div>
