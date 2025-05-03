@@ -9,24 +9,29 @@ interface IService {
 
 export const Services: React.FC = () => {
     const servicesList: IService[] = [
-        { id: 1, title: 'Free RS shipping', description: 'On all orders over 30 €', imageLink: '/services/shipping.svg' },
+        {
+            id: 1,
+            title: 'Free RS shipping',
+            description: 'On all orders over 30 €',
+            imageLink: '/images/services/shipping.svg',
+        },
         {
             id: 2,
             title: 'ADD gift message',
             description: 'Add a personalised message to your candle',
-            imageLink: '/services/gift.svg',
+            imageLink: '/images/services/gift.svg',
         },
         {
             id: 3,
             title: 'Happiness guarantee',
             description: 'Our care team will be happy to help',
-            imageLink: '/services/smile.svg',
+            imageLink: '/images/services/smile.svg',
         },
         {
             id: 4,
             title: '5 star rated',
             description: 'Across our products and services',
-            imageLink: '/services/star.svg',
+            imageLink: '/images/services/star.svg',
         },
     ]
     return (

@@ -13,13 +13,13 @@ export const SocialsLinks: React.FC = () => {
         {
             id: 'social_1',
             title: 'Flowwow',
-            icon: '/socials/flowwow.svg',
+            icon: '/images/socials/flowwow.svg',
             href: 'https://flowwow.com/en-en/shop/austris-handmade-candles/',
         },
-        { id: 'social_2', title: 'Telegram', icon: '/socials/telegram.svg', href: '#' },
-        { id: 'social_3', title: 'Facebook', icon: '/socials/facebook.svg', href: '#' },
-        { id: 'social_4', title: 'Instagram', icon: '/socials/instagram.svg', href: '#' },
-        { id: 'social_5', title: 'Pinterest', icon: '/socials/pinterest.svg', href: '#' },
+        { id: 'social_2', title: 'Telegram', icon: '/images/socials/telegram.svg', href: '#' },
+        { id: 'social_3', title: 'Facebook', icon: '/images/socials/facebook.svg', href: '#' },
+        { id: 'social_4', title: 'Instagram', icon: '/images/socials/instagram.svg', href: '#' },
+        { id: 'social_5', title: 'Pinterest', icon: '/images/socials/pinterest.svg', href: '#' },
     ]
 
     return (

@@ -7,14 +7,14 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 const images = [
-    '/products/candle.png',
-    '/products/candle.png',
-    '/products/candle.png',
-    '/products/candle.png',
-    '/products/candle.png',
-    '/products/candle.png',
-    '/products/candle.png',
-    '/products/candle.png',
+    '/images/products/candle.png',
+    '/images/products/candle.png',
+    '/images/products/candle.png',
+    '/images/products/candle.png',
+    '/images/products/candle.png',
+    '/images/products/candle.png',
+    '/images/products/candle.png',
+    '/images/products/candle.png',
 ]
 
 export const Socials = () => {
