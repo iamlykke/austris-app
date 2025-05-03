@@ -6,6 +6,7 @@
     --background: #ffffff;
     --foreground: #1c1c1c;
     --beige: '#f1e3d7';
+    --swiper-navigation-size: 12px !important;
 }
 
 @media (prefers-color-scheme: white) {
@@ -20,4 +21,15 @@ body {
     color: var(--foreground);
     background: var(--background);
     font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    right: 10px;
+    padding: 10px;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
 }

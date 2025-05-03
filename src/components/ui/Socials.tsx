@@ -1,19 +1,58 @@
-export const Socials: React.FC = () => {
+'use client'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
+import Image from 'next/image'
+import 'swiper/css'
+import 'swiper/css/navigation'
+
+const images = [
+    '/products/candle.png',
+    '/products/candle.png',
+    '/products/candle.png',
+    '/products/candle.png',
+    '/products/candle.png',
+    '/products/candle.png',
+    '/products/candle.png',
+    '/products/candle.png',
+]
+
+export const Socials = () => {
     return (
-        <section className=" flex flex-col justify-center items-center pb-[54px] pt-[54px] gap-[54px] border-t-2">
-            <div className="flex flex-col items-center gap-[25px] w-full">
-                <p className="text-[12px] uppercase text-center">Don&apos;t miss out!</p>
-                <p className="text-[18px] uppercase text-center">follow us on social media</p>
+        <section className="flex flex-col items-center border-t-2 py-14 gap-14">
+            {/* Заголовок */}
+            <div className="flex flex-col items-center gap-6 px-4 sm:px-0 w-full">
+                <p className="text-xs uppercase text-center">Don&apos;t miss out!</p>
+                <p className="text-lg uppercase text-center">follow us on social media</p>
             </div>
-            <div className="container mx-auto flex flex-row gap-1 overflow-x-scroll w-full">
-                <div className="bg-[#F1E3D7] w-[300px] h-[300px] aspect-square rounded-[6px]" />
-                <div className="bg-[#F1E3D7] w-[300px] h-[300px] aspect-square rounded-[6px]" />
-                <div className="bg-[#F1E3D7] w-[300px] h-[300px] aspect-square rounded-[6px]" />
-                <div className="bg-[#F1E3D7] w-[300px] h-[300px] aspect-square rounded-[6px]" />
-                <div className="bg-[#F1E3D7] w-[300px] h-[300px] aspect-square rounded-[6px]" />
-                <div className="bg-[#F1E3D7] w-[300px] h-[300px] aspect-square rounded-[6px]" />
-                <div className="bg-[#F1E3D7] w-[300px] h-[300px] aspect-square rounded-[6px]" />
-                <div className="bg-[#F1E3D7] w-[300px] h-[300px] aspect-square rounded-[6px]" />
+
+            {/* Swiper */}
+            <div className="w-full container mx-auto px-3">
+                <Swiper
+                    modules={[Navigation]}
+                    navigation // стрелки ‹ ›
+                    spaceBetween={3}
+                    breakpoints={{
+                        0: { slidesPerView: 1.2 },
+                        640: { slidesPerView: 2.2 },
+                        768: { slidesPerView: 3.2 },
+                        1024: { slidesPerView: 4.2 },
+                        1280: { slidesPerView: 6 },
+                    }}
+                >
+                    {images.map((src, i) => (
+                        <SwiperSlide key={i} className="rounded-lg overflow-hidden">
+                            <div className="w-full h-0 pb-[100%]">
+                                <Image
+                                    src={src}
+                                    alt={`slide-${i}`}
+                                    fill
+                                    style={{ objectFit: 'cover', cursor: 'pointer' }}
+                                />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </section>
     )
