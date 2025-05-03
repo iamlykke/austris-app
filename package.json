@@ -10,6 +10,7 @@
         "prettify": "prettier --log-level warn --ignore-path './.prettierignore --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,scss}'"
     },
     "dependencies": {
+        "@supabase/supabase-js": "^2.49.4",
         "lucide-react": "^0.476.0",
         "next": "^15.3.1",
         "react": "^19.0.0",
